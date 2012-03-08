@@ -20,7 +20,7 @@
 
     <% if System::get_property('platform') == 'APPLE' || System::get_property('platform') == 'ANDROID' || is_bb6 || System::get_property('webview_framework') =~ /^WEBKIT/ %>
         
-        <link rel="stylesheet" href="/public/css/jqmobile-patch.css">
+      
         <% if System::get_property('platform') == 'APPLE' %>
             <link href="/public/jqmobile/jquery-mobile-iphone.css" type="text/css" rel="stylesheet"/>
         <% end %>
