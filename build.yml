@@ -1,0 +1,24 @@
+#sdk: "/Users/balajidl/.rvm/gems/ruby-1.9.2-p290/gems/rhodes-3.3.2"
+sdkversion: 3.3.2
+name: rhodes_jqmobi_demo
+version: 1.0
+vendor: rhomobile
+build: debug
+bbver: 4.6
+applog: rholog.txt
+iphone:
+  configuration: Release
+  sdk: iphonesimulator5.0
+  provisionprofile:
+  codesignidentity:
+  entitlements:
+  BundleIdentifier: com.rhomobile.rhodesjqmobidemo
+  BundleURLScheme: rhodesjqmobidemo
+wp:
+  productid: 'dbee7040-4b2e-012f-1d66-482a14274cb5'
+symbian:
+  uid: '0xeff0eb06'
+android:
+  version: 2.1
+
+extensions: ["json", "another-extension"]
