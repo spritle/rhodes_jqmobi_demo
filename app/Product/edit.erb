@@ -1,46 +1,34 @@
-<div data-role="page">
-
-  <div data-role="header" data-position="inline">
+  <div id="header">
     <h1>Edit <%= @product.brand %></h1>
-    <a href="<%= url_for :action => :show, :id => @product.object %>" class="ui-btn-left" data-icon="back" data-direction="reverse">
+    <a href="<%= url_for :action => :show, :id => @product.object %>">
       Cancel
     </a>
-    <a href="<%= url_for :action => :delete, :id => @product.object %>" class="ui-btn-right" data-icon="delete" data-direction="reverse">
+    <a href="<%= url_for :action => :delete, :id => @product.object %>">
       Delete
     </a>
   </div>
-
-  <div data-role="content">
-    <form method="POST" action="<%= url_for :action => :update %>">
+ <br />
+     <form method="POST" action="<%= url_for :action => :update %>">
+     <fieldset>
       <input type="hidden" name="id" value="<%= @product.object %>"/>
       
-          <div data-role="fieldcontain">
-            <label for="product[brand]" class="fieldLabel">Brand</label>
-            <input type="text" id="product[brand]" name="product[brand]" value="<%= @product.brand %>" <%= placeholder( "Brand" ) %> />
-          </div>
+            <label for="product[brand]" class="fieldLabel">Brand</label><br />
+            <input type="text" id="product[brand]" name="product[brand]" value="<%= @product.brand %>" class='jq-ui-forms' /><br />
+            
+            <label for="product[name]" class="fieldLabel">Name</label><br />
+            <input type="text" id="product[name]" name="product[name]" value="<%= @product.name %>" class='jq-ui-forms' /><br />
+          
+            <label for="product[price]" class="fieldLabel">Price</label><br />
+            <input type="text" id="product[price]" name="product[price]" value="<%= @product.price %>" class='jq-ui-forms' /><br />
+          
+            <label for="product[quantity]" class="fieldLabel">Quantity</label><br />
+            <input type="text" id="product[quantity]" name="product[quantity]" value="<%= @product.quantity %>" class='jq-ui-forms' /><br />
+          
+            <label for="product[sku]" class="fieldLabel">Sku</label><br />
+            <input type="text" id="product[sku]" name="product[sku]" value="<%= @product.sku %>" class='jq-ui-forms' /><br />
+          
       
-          <div data-role="fieldcontain">
-            <label for="product[name]" class="fieldLabel">Name</label>
-            <input type="text" id="product[name]" name="product[name]" value="<%= @product.name %>" <%= placeholder( "Name" ) %> />
-          </div>
-      
-          <div data-role="fieldcontain">
-            <label for="product[price]" class="fieldLabel">Price</label>
-            <input type="text" id="product[price]" name="product[price]" value="<%= @product.price %>" <%= placeholder( "Price" ) %> />
-          </div>
-      
-          <div data-role="fieldcontain">
-            <label for="product[quantity]" class="fieldLabel">Quantity</label>
-            <input type="text" id="product[quantity]" name="product[quantity]" value="<%= @product.quantity %>" <%= placeholder( "Quantity" ) %> />
-          </div>
-      
-          <div data-role="fieldcontain">
-            <label for="product[sku]" class="fieldLabel">Sku</label>
-            <input type="text" id="product[sku]" name="product[sku]" value="<%= @product.sku %>" <%= placeholder( "Sku" ) %> />
-          </div>
-      
-      <input type="submit" value="Update"/>
+      <input type="submit" value="Update" class="button"/>
+     </fieldset> 
     </form>
-  </div>
-
-</div>
+  
