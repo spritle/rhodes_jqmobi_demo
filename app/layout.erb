@@ -20,11 +20,18 @@
     <% if System::get_property('platform') == 'APPLE' || System::get_property('platform') == 'ANDROID' || is_bb6 || System::get_property('webview_framework') =~ /^WEBKIT/ %>
         
         <link href="/public/css/jq.ui.css" type="text/css" rel="stylesheet"/>
+    
+        <script type="text/javascript" charset="utf-8" src="/public/js/jq.mobi.min.js"></script>
+        
+        <script type="text/javascript" charset="utf-8" src="/public/js/jq.passwordBox.js"></script>
+        <script type="text/javascript" charset="utf-8" src="/public/js/jq.scroller.js"></script>
+        <script type="text/javascript" charset="utf-8" src="/public/js/jq.selectBox.js"></script>
+        <script type="text/javascript" charset="utf-8" src="/public/js/jq.css3animate.js"></script>
         <% if System::get_property('platform') == 'APPLE' %>
             <link href="/public/jqmobile/jquery-mobile-iphone.css" type="text/css" rel="stylesheet"/>
         <% end %>
 
-               
+        <script type="text/javascript" charset="utf-8" src="/public/js/jq.ui.js"></script>               
     <% end %>
 
     <% if System::get_property('platform') == 'APPLE' %>
@@ -45,14 +52,10 @@
     <% end %>
 </head>
 
-<body
-<% if is_bb6 %>
-	data-do-fix-forms="true"
-<% elsif System::get_property('platform') == 'WP7' %>
-	onload="wp7_change_forms_action_to_get()"
-<% end %>
-	>
-    <%= @content %>
+<body>
+   
+      <%= @content %>
+   
 </body>
 
 </html>
