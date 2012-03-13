@@ -1,12 +1,11 @@
-
   <div id="header">
     <h1><%= @product.brand %></h1>
     <a href="<%= url_for :action => :edit, :id => @product.object %>" >
       Edit
     </a>
   </div>
-
-    <ul>
+   <div class="panel">
+     <ul>
           <li>
             <div class="itemLabel">Brand</div>
             <div class="itemValue"><%= @product.brand %></div>
@@ -32,6 +31,6 @@
             <div class="itemValue"><%= @product.sku %></div>
           </li>
       
-    </ul>
-  
+     </ul>
+  </div>
 
